@@ -55,3 +55,8 @@ alias c="clear"
 alias e="exit"
 alias ssh="ssh -X"
 alias ..="cd .."
+
+# Local profile
+if [[ -r ~/.profile_local ]]; then
+    . ~/.profile_local
+fi
