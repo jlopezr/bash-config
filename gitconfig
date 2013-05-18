@@ -1,0 +1,5 @@
+[core]
+	editor = /usr/bin/vim
+[user]
+	name = Juan López Rubio
+	email = j.lopez.r@gmail.com
