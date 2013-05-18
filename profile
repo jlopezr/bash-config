@@ -36,7 +36,15 @@ if [[ "$enable_gnu_ls" == "yes" ]]; then
 fi
 
 # Prompt
-source ~/.bash-config/prompt/classic.sh
+function prompt() {
+   if [[ "$1" == "" ]]; then
+	echo "Available prompts are:"
+	dir ~/.bash-config/prompt
+   else
+	source ~/.bash-config/prompt/$1
+   fi
+}
+prompt classic
 
 # Useful aliases
 alias ls='ls $LS_OPTIONS -hF'
