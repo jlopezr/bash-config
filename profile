@@ -39,9 +39,13 @@ fi
 function prompt() {
    if [[ "$1" == "" ]]; then
 	echo "Available prompts are:"
-	dir ~/.bash-config/prompt
+	dir $HOME/.bash-config/prompt
    else
-	source ~/.bash-config/prompt/$1
+        if [[ -f "$HOME/.bash-config/prompt/$1" ]]; then
+	     source ~/.bash-config/prompt/$1
+        else
+             echo "prompt $1 not found."
+        fi 
    fi
 }
 prompt classic
