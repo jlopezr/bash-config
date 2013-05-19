@@ -1,0 +1,4 @@
+# https://bbs.archlinux.org/viewtopic.php?pid=1156660#p1156660
+PS1="\n\$(if [[ \$? == 0 ]]; then echo \"\[\033[0;34m\]\"; else echo \"\[\033[0;31m\]\"; fi)\342\226\210\342\226\210 [ \W ] [ \t ]\n\[\033[0m\]\342\226\210\342\226\210 "
+PS2=
+PROMPT_COMMAND=
