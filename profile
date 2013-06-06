@@ -60,6 +60,9 @@ alias e="exit"
 alias ssh="ssh -X"
 alias ..="cd .."
 
+# TERM
+declare -x TERM=xterm-256color
+
 # Local profile
 if [[ -r ~/.profile_local ]]; then
     . ~/.profile_local
