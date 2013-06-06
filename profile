@@ -3,7 +3,7 @@ platform='unknown'
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
     platform='linux'
-    local enable_gnu_ls="yes"
+    enable_gnu_ls="yes"
 elif [[ "$unamestr" == 'Darwin' ]]; then
     platform='macosx'
     if [ -d "/opt/local/libexec/gnubin" ]; then
