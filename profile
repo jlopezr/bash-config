@@ -6,7 +6,8 @@ if [[ "$unamestr" == 'Linux' ]]; then
     enable_gnu_ls="yes"
 elif [[ "$unamestr" == 'Darwin' ]]; then
     platform='macosx'
-    if [ -d "/opt/local/libexec/gnubin" ]; then
+    # Check if 'coreutils' package is installed 
+    if [ -f "/opt/local/libexec/gnubin/dircolors" ]; then
 	PATH=/opt/local/libexec/gnubin:$PATH
 	enable_gnu_ls="yes"
     else
