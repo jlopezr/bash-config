@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Java
+export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
+
+# Servlet
+export SERVLET_API=/Users/juan/Dropbox/Proyectos/jease/lib/servlet-api.jar
+
+# Scala (for Play Framework);
+export SCALA_HOME=/opt/local/share/scala-2.10
