@@ -1,7 +1,7 @@
 [core]
-	editor = /usr/bin/vim
+	editor = vim
 [user]
 	name = Juan López Rubio
 	email = j.lopez.r@gmail.com
 [push]
-#	default = simple
+	default = simple
