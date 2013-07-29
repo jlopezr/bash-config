@@ -2,9 +2,15 @@
 
 # Java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+export JDK_HOME=$JAVA_HOME
 
 # Servlet (for Jease)
 export SERVLET_API=/Users/juan/Dropbox/Proyectos/jease/lib/servlet-api.jar
+
+# GMSEC
+export GMSEC_PLATFORM=macosx.x86_64
+export GMSEC_HOME=~/Dropbox/Proyectos/IPM/GMSEC/GMSEC_API-3.5
+export LD_LIBRARY_PATH=$GMSEC_HOME/bin
 
 # Scala (for swagger-play)
 export SCALA_HOME=/usr/local/share/scala-2.9.1-1
