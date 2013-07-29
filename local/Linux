@@ -1,7 +1,17 @@
+#JAVA
+declare -x JDK_HOME=/usr/lib/jvm/java-7-oracle
+
+#SERVLET API (jease)
+declare -x SERVLET_API=~/jease-marea-site/lib/servlet-api.jar
+
+# GMSEC
+declare -x GMSEC_PLATFORM=linux.x86_64
+declare -x GMSEC_HOME=~/GMSEC_API-3.5
+declare -x LD_LIBRARY_PATH=$GMSEC_HOME/bin
+
 # ROS
 source /opt/ros/fuerte/setup.bash
 export ROS_PACKAGE_PATH=~/ros_workspace:$ROS_PACKAGE_PATH
 export ROS_WORKSPACE=~/ros_workspace
 export ROS_HOSTNAME=localhost
 export ROS_MASTER_URI=http://localhost:11311
-
