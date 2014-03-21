@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Java
+export JAVA_HOME=/usr/lib/jvm/java-7-oracle
+export JDK_HOME=$JAVA_HOME
+
+# Servlet (for Jease)
+export SERVLET_API=~/jease-marea-site/lib/servlet-api.jar
+
+# GMSEC
+export GMSEC_PLATFORM=linux.x86_64
+export GMSEC_HOME=~/GMSEC_API-3.5
+export LD_LIBRARY_PATH=$GMSEC_HOME/bin
+
+# ROS
+if [ -f /opt/ros/fuerte/setup.bash ]; then
+	source /opt/ros/fuerte/setup.bash
+	export ROS_PACKAGE_PATH=~/ros_workspace:$ROS_PACKAGE_PATH
+	export ROS_WORKSPACE=~/ros_workspace
+	export ROS_HOSTNAME=localhost
+	export ROS_MASTER_URI=http://localhost:11311
+fi
