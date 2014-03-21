@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Java
-export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 
-# Servlet
+# Servlet (for Jease)
 export SERVLET_API=/Users/juan/Dropbox/Proyectos/jease/lib/servlet-api.jar
 
-# Scala (for Play Framework);
-export SCALA_HOME=/opt/local/share/scala-2.10
+# Scala (for swagger-play)
+export SCALA_HOME=/usr/local/share/scala-2.9.1-1

@@ -58,8 +58,9 @@ alias l='ls $LS_OPTIONS -lAhF'
 alias cd..="cd .."
 alias c="clear"
 alias e="exit"
-alias ssh="ssh -X"
+#alias ssh="ssh -X"
 alias ..="cd .."
+alias php-cgi="php -r '"'parse_str(implode("&", array_slice($argv, 2)), $_GET); include($argv[1]);'"' --"
 
 # TERM
 declare -x TERM=xterm-256color
