@@ -5,3 +5,5 @@
 	email = j.lopez.r@gmail.com
 [push]
 	default = simple
+[alias]
+	vlog = log --graph --date-order --date=relative --pretty=format:\"%C(cyan)%h: %Cblue - %an - %Cgreen %C(cyan)%ar:%Creset%n%s%n\" --color

@@ -65,7 +65,15 @@ alias php-cgi="php -r '"'parse_str(implode("&", array_slice($argv, 2)), $_GET); 
 # TERM
 declare -x TERM=xterm-256color
 
+# Git visual log displays commit tree view with who did what when and in which branch
+git config --global alias.vlog 'log --graph --date-order --date=relative --pretty=format:"%C(cyan)%h: %Cblue - %an - %Cgreen %C(cyan)%ar:%Creset%n%s%n" --color'
+
 # Local profile
 if [[ -r ~/.profile_local ]]; then
     . ~/.profile_local
+fi
+
+# Bash autocompletion
+if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
+    . /opt/local/etc/profile.d/bash_completion.sh
 fi
