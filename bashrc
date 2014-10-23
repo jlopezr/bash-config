@@ -17,6 +17,10 @@ fi
 
 # MacPorts 
 if [[ "$platform" == "macosx" ]]; then
+    # bash-completion
+    if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
+            . /opt/local/etc/profile.d/bash_completion.sh
+    fi
     export PATH=/opt/local/bin:/opt/local/sbin:$PATH
     export MANPATH=/opt/local/share/man:$MANPATH
 fi
@@ -71,9 +75,4 @@ git config --global alias.vlog 'log --graph --date-order --date=relative --prett
 # Local profile
 if [[ -r ~/.profile_local ]]; then
     . ~/.profile_local
-fi
-
-# Bash autocompletion
-if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
-    . /opt/local/etc/profile.d/bash_completion.sh
 fi
