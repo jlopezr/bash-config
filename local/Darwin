@@ -16,3 +16,6 @@ export SCALA_HOME=/usr/local/share/scala-2.9.1-1
 
 # Android
 PATH=$PATH:/Applications/android-sdk-macosx/platform-tools:/Applications/android-sdk-macosx/tools
+
+# Android AOSP
+ulimit -S -n 1024
