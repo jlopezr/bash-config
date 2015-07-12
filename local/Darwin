@@ -20,3 +20,7 @@ ANDROID_HOME=/Applications/android-sdk-macosx
 
 # Android AOSP
 ulimit -S -n 1024
+
+# Rust
+alias cargo='DYLD_LIBRARY_PATH=/opt/local/lib /usr/local/bin/cargo'
+export RUST_SRC_PATH=/usr/local/src/rust/src
