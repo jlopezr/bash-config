@@ -24,3 +24,8 @@ ulimit -S -n 1024
 # Rust
 alias cargo='DYLD_LIBRARY_PATH=/opt/local/lib /usr/local/bin/cargo'
 export RUST_SRC_PATH=/usr/local/src/rust/src
+
+#Go
+export GOPATH=$HOME/work
+export GOROOT=`env go env GOROOT`
+PATH=$PATH:$GOROOT/bin:$GOPATH/bin
