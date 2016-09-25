@@ -33,3 +33,11 @@ PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 #Mysql
 alias mysqlstart='sudo -b /opt/local/bin/mysqld_safe5' 
 alias mysqlstop='/opt/local/bin/mysqladmin5 -u root -p shutdown'
+
+#Platformio
+export PATH=$PATH:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin
+
+#CUDA & TensorFlow
+export CUDA_HOME=/usr/local/cuda
+export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
+export PATH="$CUDA_HOME/bin:$PATH"
