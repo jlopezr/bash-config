@@ -8,14 +8,14 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
     platform='macosx'
     # Check if 'coreutils' package is installed 
     if [ -f "/opt/local/libexec/gnubin/dircolors" ]; then
-	PATH=/opt/local/libexec/gnubin:$PATH
-	enable_gnu_ls="yes"
+        PATH=/opt/local/libexec/gnubin:$PATH
+        enable_gnu_ls="yes"
     else
-	enable_bsd_ls="yes"
+        enable_bsd_ls="yes"
     fi
 fi
 
-# MacPorts 
+# MacPorts
 if [[ "$platform" == "macosx" ]]; then
     # bash-completion
     if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
@@ -24,6 +24,9 @@ if [[ "$platform" == "macosx" ]]; then
     export PATH=/opt/local/bin:/opt/local/sbin:$PATH
     export MANPATH=/opt/local/share/man:$MANPATH
 fi
+
+# Add user scripts
+PATH=$PATH:$HOME/.bash-config/bin
 
 # Enable color for BSD ls
 if [[ "$enable_bsd_ls" == "yes" ]]; then
@@ -42,16 +45,16 @@ fi
 
 # Prompt
 function prompt() {
-   if [[ "$1" == "" ]]; then
-	echo "Available prompts are:"
-	dir $HOME/.bash-config/prompt
-   else
+    if [[ "$1" == "" ]]; then
+        echo "Available prompts are:"
+        dir $HOME/.bash-config/prompt
+    else
         if [[ -f "$HOME/.bash-config/prompt/$1" ]]; then
-	     source ~/.bash-config/prompt/$1
+            source ~/.bash-config/prompt/$1
         else
              echo "prompt $1 not found."
-        fi 
-   fi
+        fi
+    fi
 }
 prompt classic
 
