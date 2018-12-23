@@ -41,3 +41,12 @@ export PATH=$PATH:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bi
 export CUDA_HOME=/usr/local/cuda
 export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
 export PATH="$CUDA_HOME/bin:$PATH"
+
+###CPCTELERA_START
+##
+## These lines configure CPCtelera in your system
+##
+export CPCT_PATH=/Users/juan/cpctelera/cpctelera
+export PATH=${PATH}:/Users/juan/cpctelera/cpctelera/tools/scripts
+export CPCTELERA_PATH=$CPCT_PATH
+###CPCTELERA_END
