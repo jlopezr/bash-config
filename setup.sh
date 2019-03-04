@@ -7,5 +7,4 @@ ln -s .bash-config/tmux.conf .tmux.conf
 UNAMESTR=`uname`
 ln -s .bash-config/local/$UNAMESTR .profile_local
 mkdir .config
-cd .config
-ln -s $HOME/.bash-config/omf/ omf
+ln -s .bash-config/fish .config/fish
