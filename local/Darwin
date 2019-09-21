@@ -50,3 +50,21 @@ export CPCT_PATH=/Users/juan/cpctelera/cpctelera
 export PATH=${PATH}:/Users/juan/cpctelera/cpctelera/tools/scripts
 export CPCTELERA_PATH=$CPCT_PATH
 ###CPCTELERA_END
+
+# DOCKER
+dps() { docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}" $*; }
+dpsa() { docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}" -a $*; }
+dports() { docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}" $*; }
+dtail() { docker logs --tail=10 -f `docker-compose ps -q $1`; }
+dlog() { docker logs $2 `docker-compose ps -q $1`; }
+dc() { docker-compose $@; }
+dpid() { docker ps -q | xargs docker inspect --format '{{.State.Pid}}, {{.Name}}'; }
+dip() { ID=`docker-compose ps -q $1`; rc=$?; if [[ $rc == 0 ]]; then docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $ID; fi; }
+dips() { [[ $# -eq 0 ]] && GREP_OPT="." || GREP_OPT="$1"; docker ps -q | xargs docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}} {{.Name}}' | grep $GREP_OPT; }
+dcbug() { dc run --rm $@ /bin/bash; }
+dtop() { docker stats $(docker ps --format={{.Names}}); }
+dexec() { dc exec $*; }
+dbash() { dc exec $* /bin/bash; }
+alias dtree='docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock nate/dockviz images -t'
+alias drmc='docker rm $(docker ps -qa --no-trunc --filter "status=exited")'
+alias drmi='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
