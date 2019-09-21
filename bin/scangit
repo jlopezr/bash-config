@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Update all git directories below current directory or specified directory
-# Skips directories that contain a file called .ignore
+# Skips directories that contain a file called .ignore_scangit
 
 #HIGHLIGHT='\e[01;34m'
 #NORMAL='\e[00m'
@@ -11,7 +11,7 @@ NORMAL=''
 function update {
   local d="$1"
   if [ -d "$d" ]; then
-    if [ -e "$d/.ignore" ]; then 
+    if [ -e "$d/.ignore_scangit" ]; then 
       echo -e "\n${HIGHLIGHT}Ignoring $d${NORMAL}"
     else
       cd $d > /dev/null
