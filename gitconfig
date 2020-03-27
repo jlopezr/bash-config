@@ -1,5 +1,6 @@
 [core]
 	editor = vim
+	autocrlf = false
 [user]
 	name = Juan López Rubio
 	email = j.lopez.r@gmail.com
