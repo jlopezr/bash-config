@@ -79,3 +79,8 @@ git config --global alias.vlog 'log --graph --date-order --date=relative --prett
 if [[ -r ~/.profile_local ]]; then
     . ~/.profile_local
 fi
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
