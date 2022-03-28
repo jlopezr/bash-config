@@ -87,3 +87,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # added by travis gem
 [ ! -s /Users/juan/.travis/travis.sh ] || source /Users/juan/.travis/travis.sh
+
+# Cargo and other rust tools
+. "$HOME/.cargo/env"
