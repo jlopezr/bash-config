@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+PATH=$PATH:/opt/local/bin
 hash jq 2>/dev/null || { echo >&2 "I require jq but it's not installed.  Aborting."; exit 1; }
 if [ "$#" -eq 1 ]; then
      jq -S . $1
