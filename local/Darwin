@@ -65,9 +65,11 @@ dcbug() { dc run --rm $@ /bin/bash; }
 dtop() { docker stats $(docker ps --format={{.Names}}); }
 dexec() { dc exec $*; }
 dbash() { dc exec $* /bin/bash; }
+dvolume() { docker run -it -v $1:/mnt --rm snkshukla/alpine-zsh bash; }
 alias dtree='docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock nate/dockviz images -t'
 alias drmc='docker rm $(docker ps -qa --no-trunc --filter "status=exited")'
 alias drmi='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
+
 
 # added by travis gem
 [ -f /Users/juan/.travis/travis.sh ] && source /Users/juan/.travis/travis.sh
